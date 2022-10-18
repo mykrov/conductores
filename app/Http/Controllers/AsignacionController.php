@@ -7,6 +7,7 @@ use App\Models\Conductor;
 use App\Models\Vehiculo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class AsignacionController extends Controller
 {
@@ -26,17 +27,19 @@ class AsignacionController extends Controller
 
     public function Asignar(Request $r)
     {
-        $idVehiculo = $r->vehiculo;
+        Log::info('Nueva Asignacion', ['peticion'=>$r]);
         $idConductor = $r->conductor;
+        $idVehiculo = $r->vehiculo;
 
         $asignacion = new Asignacion();
         $asignacion->vehiculo = $idVehiculo;
-        $idConductor->conductor = $idConductor;
+        $asignacion->conductor = $idConductor;
 
         try {
             $asignacion->save();
             return response()->json(['status'=> 'ok'],201);
         } catch (\Throwable $th) {
+            Log::error($th->getMessage());
             return response()->json(['status'=> 'error'],500);
         }
        
@@ -53,7 +56,9 @@ class AsignacionController extends Controller
             'conductor.apellido',
             'vehiculo.idvehiculo',
             'vehiculo.modelo',
-            'vehiculo.marca'
+            'vehiculo.marca',
+            'vehiculo.placa',
+            'conductor.cedula'
             )
         ->get();
        

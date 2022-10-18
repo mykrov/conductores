@@ -45,7 +45,9 @@
                             <img src="assets/img/logo-icon.png" class="img-fluid logo-mobile" alt="logo" />
                         </a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <i class="ti ti-align-left"></i>
                     </button>
                     <!-- end navbar-header -->
@@ -58,119 +60,7 @@
                                         <i class="ti ti-align-right"></i>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link  " href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mega Menu
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                    <div class="dropdown-menu mega-menu animated fadeIn" aria-labelledby="navbarDropdown">
-                                        <div class="row no-gutters">
-                                            <div class="col-sm-2 p-20">
-                                                <h4>UI Kit</h4>
-                                                <ul>
-                                                    <li class="nav-link">
-                                                        <a href="ui-alerts.html">Alerts</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="ui-button.html">Buttons</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="ui-cards.html">Cards</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="ui-carousel.html">Carousel</a>
-                                                    </li>
 
-                                                    <li class="nav-link">
-                                                        <a href="ui-dropdowns.html">Dropdowns</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="ui-list-group.html">List Group</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="ui-modals.html">Modals</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="ui-progressbars.html">Progress Bars</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="ui-tabs.html">Tabs</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-2 p-20">
-                                                <h4>Pages</h4>
-                                                <ul>
-                                                    <li class="nav-link">
-                                                        <a href="page-account-settings.html">Account Settings</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="page-clients.html">Clients</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="page-contacts.html">Contacts</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="page-gallery.html">Gallery</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="page-pricing.html">Pricing</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="page-task-list.html">Task List</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="page-404.html">404</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="page-500.html">500</a>
-                                                    </li>
-                                                    <li class="nav-link">
-                                                        <a href="page-coming-soon.html">Coming Soon</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-4 p-20">
-                                                <h4>Contact Us</h4>
-                                                <div>
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" id="Password1" placeholder="Enter Name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="email" class="form-control" id="Email1" placeholder="Enter Email">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <textarea class="form-control" placeholder="Message" id="Textarea1" rows="3"></textarea>
-                                                        </div>
-                                                        <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="chart-wrap">
-                                                    <div class="p-20">
-                                                        <h4 class="mb-1">Page Views</h4>
-                                                        <p>Daily page visitors</p>
-                                                        <h2 class="text-primary font-xxl mt-2">80+</h2>
-                                                    </div>
-                                                    <div class="apexchart-wrapper">
-                                                        <div id="pageview"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="javascript:void(0)" class="nav-link " id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop Down
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                    <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item nav-link" href="javascript:void(0)">Action</a>
-                                        <a class="dropdown-item nav-link" href="javascript:void(0)">Another action</a>
-                                        <a class="dropdown-item nav-link" href="javascript:void(0)">Something else here</a>
-                                    </div>
-                                </li>
                                 <li class="nav-item full-screen d-none d-lg-block" id="btnFullscreen">
                                     <a href="javascript:void(0)" class="nav-link expand">
                                         <i class="icon-size-fullscreen"></i>
@@ -179,23 +69,29 @@
                             </ul>
                             <ul class="navbar-nav nav-right ml-auto">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown2"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
                                         <i class="ti ti-email"></i>
                                     </a>
-                                    <div class="dropdown-menu extended animated fadeIn" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu extended animated fadeIn"
+                                        aria-labelledby="navbarDropdown">
                                         <ul>
                                             <li class="dropdown-header bg-gradient p-4 text-white text-left">Messages
                                                 <label class="label label-info label-round">6</label>
-                                                <a href="#" class="float-right btn btn-square btn-inverse-light btn-xs m-0">
+                                                <a href="#"
+                                                    class="float-right btn btn-square btn-inverse-light btn-xs m-0">
                                                     <span class="font-13"> Mark all as read</span></a>
                                             </li>
                                             <li class="dropdown-body">
                                                 <ul class="scrollbar scroll_dark max-h-240">
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
-                                                                    <img class="img-fluid" src="assets/img/avtar/03.jpg" alt="user3">
+                                                                    <img class="img-fluid" src="assets/img/avtar/03.jpg"
+                                                                        alt="user3">
                                                                 </div>
                                                                 <div class="notify-message">
                                                                     <p class="font-weight-bold">Brianing Leyon</p>
@@ -206,9 +102,11 @@
                                                     </li>
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
-                                                                    <img class="img-fluid" src="assets/img/avtar/01.jpg" alt="user">
+                                                                    <img class="img-fluid" src="assets/img/avtar/01.jpg"
+                                                                        alt="user">
                                                                 </div>
                                                                 <div class="notify-message">
                                                                     <p class="font-weight-bold">Jimmyimg Leyon</p>
@@ -219,9 +117,11 @@
                                                     </li>
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
-                                                                    <img class="img-fluid" src="assets/img/avtar/02.jpg" alt="user2">
+                                                                    <img class="img-fluid"
+                                                                        src="assets/img/avtar/02.jpg" alt="user2">
                                                                 </div>
                                                                 <div class="notify-message">
                                                                     <p class="font-weight-bold">Brainjon Leyon</p>
@@ -232,9 +132,11 @@
                                                     </li>
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
-                                                                    <img class="img-fluid" src="assets/img/avtar/04.jpg" alt="user4">
+                                                                    <img class="img-fluid"
+                                                                        src="assets/img/avtar/04.jpg" alt="user4">
                                                                 </div>
                                                                 <div class="notify-message">
                                                                     <p class="font-weight-bold">Smithmin Leyon</p>
@@ -245,9 +147,11 @@
                                                     </li>
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
-                                                                    <img class="img-fluid" src="assets/img/avtar/05.jpg" alt="user5">
+                                                                    <img class="img-fluid"
+                                                                        src="assets/img/avtar/05.jpg" alt="user5">
                                                                 </div>
                                                                 <div class="notify-message">
                                                                     <p class="font-weight-bold">Jennyns Leyon</p>
@@ -258,9 +162,11 @@
                                                     </li>
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
-                                                                    <img class="img-fluid" src="assets/img/avtar/06.jpg" alt="user6">
+                                                                    <img class="img-fluid"
+                                                                        src="assets/img/avtar/06.jpg" alt="user6">
                                                                 </div>
                                                                 <div class="notify-message">
                                                                     <p class="font-weight-bold">Demian Leyon</p>
@@ -278,24 +184,30 @@
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                                        id="navbarDropdown3" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
                                         <i class="fe fe-bell"></i>
                                         <span class="notify">
-                                                    <span class="blink"></span>
-                                        <span class="dot"></span>
+                                            <span class="blink"></span>
+                                            <span class="dot"></span>
                                         </span>
                                     </a>
-                                    <div class="dropdown-menu extended animated fadeIn" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu extended animated fadeIn"
+                                        aria-labelledby="navbarDropdown">
                                         <ul>
-                                            <li class="dropdown-header bg-gradient p-4 text-white text-left">Notifications
-                                                <a href="#" class="float-right btn btn-square btn-inverse-light btn-xs m-0">
+                                            <li class="dropdown-header bg-gradient p-4 text-white text-left">
+                                                Notifications
+                                                <a href="#"
+                                                    class="float-right btn btn-square btn-inverse-light btn-xs m-0">
                                                     <span class="font-13"> Clear all</span></a>
                                             </li>
                                             <li class="dropdown-body min-h-240 nicescroll">
                                                 <ul class="scrollbar scroll_dark max-h-240">
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
                                                                     <div class="bg-type bg-type-md">
                                                                         <span>HY</span>
@@ -310,14 +222,16 @@
                                                     </li>
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
                                                                     <div class="bg-type bg-type-md bg-success">
                                                                         <span>GM</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="notify-message">
-                                                                    <p class="font-weight-bold">New invoice received</p>
+                                                                    <p class="font-weight-bold">New invoice received
+                                                                    </p>
                                                                     <small>22 min</small>
                                                                 </div>
                                                             </div>
@@ -325,7 +239,8 @@
                                                     </li>
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
                                                                     <div class="bg-type bg-type-md bg-danger">
                                                                         <span>FR</span>
@@ -340,7 +255,8 @@
                                                     </li>
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
                                                                     <div class="bg-type bg-type-md bg-info">
                                                                         <span>HT</span>
@@ -355,7 +271,8 @@
                                                     </li>
                                                     <li>
                                                         <a href="javascript:void(0)">
-                                                            <div class="notification d-flex flex-row align-items-center">
+                                                            <div
+                                                                class="notification d-flex flex-row align-items-center">
                                                                 <div class="notify-icon bg-img align-self-center">
                                                                     <div class="bg-type bg-type-md">
                                                                         <span>DE</span>
@@ -389,14 +306,18 @@
                                             <form>
                                                 <div class="form-group">
                                                     <i class="ti ti-search magnifier"></i>
-                                                    <input type="text" class="form-control autocomplete" placeholder="Search Here" id="autocomplete-ajax" autofocus="autofocus">
+                                                    <input type="text" class="form-control autocomplete"
+                                                        placeholder="Search Here" id="autocomplete-ajax"
+                                                        autofocus="autofocus">
                                                 </div>
                                             </form>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown user-profile">
-                                    <a href="javascript:void(0)" class="nav-link dropdown-toggle " id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a href="javascript:void(0)" class="nav-link dropdown-toggle "
+                                        id="navbarDropdown4" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
                                         <img src="assets/img/avtar/02.jpg" alt="avtar-img">
                                         <span class="bg-success user-status"></span>
                                     </a>
@@ -407,8 +328,9 @@
                                                     <h4 class="text-white mb-0">Alice Williams</h4>
                                                     <small class="text-white">Henry@example.com</small>
                                                 </div>
-                                                <a href="#" class="text-white font-20 tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Logout"> <i
-                                                                class="zmdi zmdi-power"></i></a>
+                                                <a href="#" class="text-white font-20 tooltip-wrapper"
+                                                    data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Logout"> <i class="zmdi zmdi-power"></i></a>
                                             </div>
                                         </div>
                                         <div class="p-4">
@@ -454,7 +376,7 @@
                 <aside class="app-navbar">
                     <!-- begin sidebar-nav -->
                     <div class="sidebar-nav scrollbar scroll_light">
-                      
+
                     </div>
                     <!-- end sidebar-nav -->
                 </aside>
@@ -480,11 +402,12 @@
                                                 <li class="breadcrumb-item">
                                                     Dashboard
                                                 </li>
-                                                <li class="breadcrumb-item active text-primary" aria-current="page">Asignaciones</li>
+                                                <li class="breadcrumb-item active text-primary" aria-current="page">
+                                                    Asignaciones</li>
                                             </ol>
                                         </nav>
                                     </div>
-                                   
+
                                 </div>
                                 <!-- end page title -->
                             </div>
@@ -492,13 +415,13 @@
                         <!-- Notification -->
                         <div class="row">
                             {{-- Card Conductores --}}
-                            <div class="col-md-6">                                                          
+                            <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-header">
                                         <h4>Conductores</h4>
                                     </div>
                                     <div class="card-body">
-                                        <table class="table table-striped" id="table_fac" >
+                                        <table class="table table-striped" id="table_conductores">
                                             <thead>
                                                 <tr>
                                                     <th>Nombre</th>
@@ -510,10 +433,10 @@
                                             <tbody>
                                                 @foreach ($conductores as $condutor)
                                                     <tr>
-                                                        <td>{{$condutor->nombre}}</td>
-                                                        <td>{{$condutor->apellido}}</td>
-                                                        <td>{{$condutor->telefono}}</td>
-                                                        <td>{{$condutor->cedula}}</td>   
+                                                        <td>{{ $condutor->nombre }}</td>
+                                                        <td>{{ $condutor->apellido }}</td>
+                                                        <td>{{ $condutor->telefono }}</td>
+                                                        <td>{{ $condutor->cedula }}</td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
@@ -525,21 +448,23 @@
                                         <h4>Vehiculos</h4>
                                     </div>
                                     <div class="card-body">
-                                        <table class="table table-striped" id="table_fac2" >
+                                        <table class="datatable-vehiculos table table-striped" id="table_vehiculos">
                                             <thead>
                                                 <tr>
                                                     <th>Marca</th>
                                                     <th>Año</th>
                                                     <th>Modelo</th>
+                                                    <th>Placa</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                
+
                                                 @foreach ($vehiculos as $vehiculo)
                                                     <tr>
-                                                        <td>{{$vehiculo->marca}}</td>
-                                                        <td>{{$vehiculo->year}}</td>
-                                                        <td>{{$vehiculo->modelo}}</td>
+                                                        <td>{{ $vehiculo->marca }}</td>
+                                                        <td>{{ $vehiculo->year }}</td>
+                                                        <td>{{ $vehiculo->modelo }}</td>
+                                                        <td>{{ $vehiculo->placa }}</td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
@@ -548,29 +473,30 @@
                                 </div>
                             </div>
                             {{-- Card Vehiculos --}}
-                            <div class="col-md-6">                                                           
+                            <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-header">
                                         <h4>Asignaciones</h4>
+                                        <button class="btn btn-primary" data-toggle="modal"
+                                            data-target="#eventModal">Nueva Asignación</button>
                                     </div>
                                     <div class="card-body">
-                                        <table class="table table-striped" id="table_fac2" >
+                                        <table class="table table-striped" id="table_asignaciones">
                                             <thead>
                                                 <tr>
-                                                    <th>Código</th>  
+                                                    <th>Placa</th>
                                                     <th>Vehiculo</th>
                                                     <th>Conductor</th>
-                                                    <th>Fecha</th>
+                                                    <th>Cédula</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach ($asignaciones as $asig)
-                                                   
-                                                    <tr>    
-                                                        <td>{{$asig->idasignacion}}</td>
-                                                        <td>{{$asig->modelo}}</td>
-                                                        <td>{{$asig->nombre}}</td>
-                                                        <td>{{$asig->nombre}}</td>
+                                                    <tr>
+                                                        <td>{{ $asig->placa }}</td>
+                                                        <td>{{ $asig->modelo }}</td>
+                                                        <td>{{ $asig->nombre }}</td>
+                                                        <td>{{ $asig->cedula }}</td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
@@ -580,38 +506,49 @@
                             </div>
                         </div>
                         <!-- end row -->
-              
+
                         <!-- event Modal -->
-                        <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="verticalCenterTitle" aria-hidden="true">
+                        <div class="modal fade" id="eventModal" tabindex="-1" role="dialog"
+                            aria-labelledby="verticalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="verticalCenterTitle">Add New Event</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <h5 class="modal-title" id="verticalCenterTitle">Seleccione Vehiculo y
+                                            Conductor</h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
                                         <form>
                                             <div class="form-group">
-                                                <label for="modelemail">Event Name</label>
-                                                <input type="email" class="form-control" id="modelemail">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Choose Event Color</label>
-                                                <select class="form-control">
-                                                    <option>Primary</option>
-                                                    <option>Warning</option>
-                                                    <option>Success</option>
-                                                    <option>Danger</option>
+                                                <label for="modelemail">Vehiculo</label>
+                                                <select class="form-control" id="selectedVeh">
+                                                    @foreach ($vehiculos as $vehiculo)
+                                                        <option value='{{ $vehiculo->idvehiculo }}'>
+                                                            {{ $vehiculo->marca . ', ' . $vehiculo->modelo . ', Placa: ' . $vehiculo->placa . ' ' . $vehiculo->year }}
+                                                        </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
-
+                                            <div class="form-group">
+                                                <label>Conductor</label>
+                                                <select class="form-control" id="selectedCon">
+                                                    @foreach ($conductores as $conductor)
+                                                        <option value='{{ $conductor->id }}'>
+                                                            {{ $conductor->nombre . ', ' . $conductor->apellido . ', Cedula: ' . $conductor->cedula }}
+                                                        </option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-success">Save changes</button>
+                                        <button type="button" class="btn btn-danger"
+                                            data-dismiss="modal">Cerrar</button>
+                                        <button type="button" id='new_asignacion'
+                                            class="btn btn-success">Guardar</button>
                                     </div>
                                 </div>
                             </div>
@@ -641,11 +578,118 @@
 
     <!-- plugins -->
     <script src="assets/js/vendors.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#table_vehiculos').DataTable({
+                "language": {
+                    "lengthMenu": "Mostrando _MENU_ records por paginas",
+                    "zeroRecords": "Sin Datos",
+                    "info": "Mostrando pagina _PAGE_ de _PAGES_",
+                    "infoEmpty": "Sin Registros",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "paginate": {
+                        "previous": "Ant",
+                        "next": "Sig"
+                    }
+                },
+                "bLengthChange": false,
+                "searching": false,
+                "bPaginate": true,
+                "bSortable": true
+            });
 
+            $('#table_conductores').DataTable({
+                "language": {
+                    "lengthMenu": "Mostrando _MENU_ records por paginas",
+                    "zeroRecords": "Sin Datos",
+                    "info": "Mostrando pagina _PAGE_ de _PAGES_",
+                    "infoEmpty": "Sin Registros",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "paginate": {
+                        "previous": "Ant",
+                        "next": "Sig"
+                    }
+                },
+                "bLengthChange": false,
+                "searching": false,
+                "bPaginate": true,
+                "bSortable": true
+            });
+
+            $('#table_asignaciones').DataTable({
+                "language": {
+                    "lengthMenu": "Mostrando _MENU_ records por paginas",
+                    "zeroRecords": "Sin Datos",
+                    "info": "Mostrando pagina _PAGE_ de _PAGES_",
+                    "infoEmpty": "Sin Registros",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "paginate": {
+                        "previous": "Ant",
+                        "next": "Sig"
+                    }
+                },
+                "bLengthChange": false,
+                "searching": false,
+                "bPaginate": true,
+                "bSortable": true
+            });
+
+
+        })
+
+        $('#new_asignacion').on('click', function(e) {
+            e.preventDefault();
+            let idVehiculo = $('#selectedVeh').val();
+            let idConductor = $('#selectedCon').val();
+
+            fetch("/api/asignar", {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    method: "POST",
+                    body: JSON.stringify({
+                        conductor: idConductor,
+                        vehiculo: idVehiculo
+                    })
+                })
+                .then(function(res) {
+                    res.json().then(
+                        data => {
+                            console.log(data);
+                            if (data.status === 'ok') {
+                                swal({
+                                    position: 'top-end',
+                                    type: 'success',
+                                    title: 'Asinganción Exitosa',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
+                                $("#eventModal").modal('hide');
+                                let table = $('#table_asignaciones').DataTable();
+                                table.ajax.reload();
+                            }
+                        }
+                    )
+                })
+                .catch(function(res) {
+                    console.log(res);
+                    swal({
+                        position: 'top-end',
+                        type: 'error',
+                        title: 'Inconvenientes con la Asinganción',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                })
+        })
+    </script>
     <!-- custom app -->
     <script src="assets/js/app.js"></script>
+
 </body>
 
 
 <!-- Mirrored from themes.potenzaglobalsolutions.com/html/mentor-bootstrap-4-admin-dashboard-template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Mar 2019 14:53:21 GMT -->
+
 </html>

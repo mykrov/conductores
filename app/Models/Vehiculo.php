@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $marca
  * @property string $modelo
  * @property int $year
+ * @property string $placa
  * @property Asignacion[] $asignacions
  */
 class Vehiculo extends Model
@@ -37,7 +38,7 @@ class Vehiculo extends Model
     /**
      * @var array
      */
-    protected $fillable = ['marca', 'modelo', 'year'];
+    protected $fillable = ['marca', 'modelo', 'year','placa'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
