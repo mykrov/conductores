@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/condutores', [ConductorController::class, 'List']);
-Route::get('/vehiculos', [VehiculoController::class, 'List']);
-Route::get('/asignaciones', [AsignacionController::class, 'List']);
-Route::post('/asignar', [AsignacionController::class, 'Asignar']);
+Route::get('/condutores', [ConductorController::class, 'List'])->name('condutoreslist');
+Route::get('/vehiculos', [VehiculoController::class, 'List'])->name('vehiculoslist');
+Route::get('/asignaciones', [AsignacionController::class, 'List'])->name('asignacioneslist');
+Route::post('/asignar', [AsignacionController::class, 'Asignar'])->name('asignar');

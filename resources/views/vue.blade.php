@@ -414,93 +414,38 @@
                         </div>
                         <!-- Notification -->
                         <div class="row">
-                            {{-- Card Conductores --}}
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Conductores</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <table class="table table-striped" id="table_conductores">
-                                            <thead>
-                                                <tr>
-                                                    <th>Nombre</th>
-                                                    <th>Apellido</th>
-                                                    <th>Teléfono</th>
-                                                    <th>Cedula</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach ($conductores as $condutor)
+                            <div id="app">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4>Asignaciones</h4>
+                                            <button class="btn btn-primary" data-toggle="modal"
+                                                data-target="#eventModal">Nueva Asignación</button>
+                                        </div>
+                                        <div class="card-body" id="asignacion_col">
+                                            <table class="table table-striped" id="table_asignaciones">
+                                                <thead>
                                                     <tr>
-                                                        <td>{{ $condutor->nombre }}</td>
-                                                        <td>{{ $condutor->apellido }}</td>
-                                                        <td>{{ $condutor->telefono }}</td>
-                                                        <td>{{ $condutor->cedula }}</td>
+                                                        <th>ID</th>
+                                                        <th>Placa</th>
+                                                        <th>Vehiculo</th>
+                                                        <th>Conductor</th>
+                                                        <th>Cédula</th>
                                                     </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Vehiculos</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <table class="datatable-vehiculos table table-striped" id="table_vehiculos">
-                                            <thead>
-                                                <tr>
-                                                    <th>Marca</th>
-                                                    <th>Año</th>
-                                                    <th>Modelo</th>
-                                                    <th>Placa</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-
-                                                @foreach ($vehiculos as $vehiculo)
-                                                    <tr>
-                                                        <td>{{ $vehiculo->marca }}</td>
-                                                        <td>{{ $vehiculo->year }}</td>
-                                                        <td>{{ $vehiculo->modelo }}</td>
-                                                        <td>{{ $vehiculo->placa }}</td>
+                                                </thead>
+                                                <tbody>
+                                                    <tr v-for="(item ,index) in asignaciones" :key="index">
+                                                        <td v-text="item.idasignacion"></td>
+                                                        <td v-text="item.vehiculo.placa"></td>
+                                                        <td v-text="item.vehiculo.marca"></td>
+                                                        <td
+                                                            v-text="`${item.conductor.nombre} ${item.conductor.apellido}`">
+                                                        </td>
+                                                        <td v-text="item.conductor.cedula"></td>
                                                     </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- Card Vehiculos --}}
-                            <div class="col-md-6" >
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Asignaciones</h4>
-                                        <button class="btn btn-primary" data-toggle="modal"
-                                            data-target="#eventModal">Nueva Asignación</button>
-                                    </div>
-                                    <div class="card-body" id="asignacion_col">
-                                        <table class="table table-striped" id="table_asignaciones">
-                                            <thead>
-                                                <tr>
-                                                    <th>Placa</th>
-                                                    <th>Vehiculo</th>
-                                                    <th>Conductor</th>
-                                                    <th>Cédula</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach ($asignaciones as $asig)
-                                                    <tr>
-                                                        <td>{{ $asig->placa }}</td>
-                                                        <td>{{ $asig->modelo }}</td>
-                                                        <td>{{ $asig->nombre }}</td>
-                                                        <td>{{ $asig->cedula }}</td>
-                                                    </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -524,22 +469,15 @@
                                         <form>
                                             <div class="form-group">
                                                 <label for="modelemail">Vehiculo</label>
-                                                <select class="form-control" id="selectedVeh">
-                                                    @foreach ($vehiculos as $vehiculo)
-                                                        <option value='{{ $vehiculo->idvehiculo }}'>
-                                                            {{ $vehiculo->marca . ', ' . $vehiculo->modelo . ', Placa: ' . $vehiculo->placa . ' ' . $vehiculo->year }}
-                                                        </option>
-                                                    @endforeach
+                                                <select v-model="selectV" class="form-control" id="selectedVeh">
+                                                   
                                                 </select>
                                             </div>
                                             <div class="form-group">
                                                 <label>Conductor</label>
-                                                <select class="form-control" id="selectedCon">
-                                                    @foreach ($conductores as $conductor)
-                                                        <option value='{{ $conductor->id }}'>
-                                                            {{ $conductor->nombre . ', ' . $conductor->apellido . ', Cedula: ' . $conductor->cedula }}
-                                                        </option>
-                                                    @endforeach
+                                                <select v-model="selectC" class="form-control">
+                                                   
+                                                </option>
                                                 </select>
                                             </div>
                                         </form>
@@ -578,133 +516,63 @@
 
     <!-- plugins -->
     <script src="assets/js/vendors.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#table_vehiculos').DataTable({
-                "language": {
-                    "lengthMenu": "Mostrando _MENU_ records por paginas",
-                    "zeroRecords": "Sin Datos",
-                    "info": "Mostrando pagina _PAGE_ de _PAGES_",
-                    "infoEmpty": "Sin Registros",
-                    "infoFiltered": "(filtered from _MAX_ total records)",
-                    "paginate": {
-                        "previous": "Ant",
-                        "next": "Sig"
-                    }
-                },
-                "bLengthChange": false,
-                "searching": false,
-                "bPaginate": true,
-                "bSortable": true
-            });
-
-            $('#table_conductores').DataTable({
-                "language": {
-                    "lengthMenu": "Mostrando _MENU_ records por paginas",
-                    "zeroRecords": "Sin Datos",
-                    "info": "Mostrando pagina _PAGE_ de _PAGES_",
-                    "infoEmpty": "Sin Registros",
-                    "infoFiltered": "(filtered from _MAX_ total records)",
-                    "paginate": {
-                        "previous": "Ant",
-                        "next": "Sig"
-                    }
-                },
-                "bLengthChange": false,
-                "searching": false,
-                "bPaginate": true,
-                "bSortable": true
-            });
-
-            $('#table_asignaciones').DataTable({
-                "language": {
-                    "lengthMenu": "Mostrando _MENU_ records por paginas",
-                    "zeroRecords": "Sin Datos",
-                    "info": "Mostrando pagina _PAGE_ de _PAGES_",
-                    "infoEmpty": "Sin Registros",
-                    "infoFiltered": "(filtered from _MAX_ total records)",
-                    "paginate": {
-                        "previous": "Ant",
-                        "next": "Sig"
-                    }
-                },
-                "bLengthChange": false,
-                "searching": false,
-                "bPaginate": true,
-                "bSortable": true
-            });
-
-
-        })
-
-        $('#new_asignacion').on('click', function(e) {
-            e.preventDefault();
-            let idVehiculo = $('#selectedVeh').val();
-            let idConductor = $('#selectedCon').val();
-
-            fetch("/api/asignar", {
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    method: "POST",
-                    body: JSON.stringify({
-                        conductor: idConductor,
-                        vehiculo: idVehiculo
-                    })
-                })
-                .then(function(res) {
-                    res.json().then(
-                        data => {
-                            console.log(data);
-                            if (data.status === 'ok') {
-                                swal({
-                                    position: 'top-end',
-                                    type: 'success',
-                                    title: 'Asinganción Exitosa',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                })
-                                $("#eventModal").modal('hide');
-                                $('#table_asignaciones').DataTable().destroy();
-                                $("#asignacion_col").load(location.href+" #asignacion_col","");
-                                $('#table_asignaciones').DataTable({
-                                    "language": {
-                                        "lengthMenu": "Mostrando _MENU_ records por paginas",
-                                        "zeroRecords": "Sin Datos",
-                                        "info": "Mostrando pagina _PAGE_ de _PAGES_",
-                                        "infoEmpty": "Sin Registros",
-                                        "infoFiltered": "(filtered from _MAX_ total records)",
-                                        "paginate": {
-                                            "previous": "Ant",
-                                            "next": "Sig"
-                                        }
-                                    },
-                                    "bLengthChange": false,
-                                    "searching": false,
-                                    "bPaginate": true,
-                                    "bSortable": true
-                                });
-                                $('#table_asignaciones').DataTable().show();
-
-                            }
-                        }
-                    )
-                })
-                .catch(function(res) {
-                    console.log(res);
-                    swal({
-                        position: 'top-end',
-                        type: 'error',
-                        title: 'Inconvenientes con la Asinganción',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                })
-        })
-    </script>
     <!-- custom app -->
     <script src="assets/js/app.js"></script>
+    {{-- Vue and Axios --}}
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                asignaciones: [],
+                conductores: [],
+                vehiculos: [],
+                selectC: '',
+                selectV: ''
+            },
+            methods: {
+                getInitData() {
+                    const urlAsignacion = '{{ route('asignacioneslist') }}';
+                    const urlCondutores = '{{ route('condutoreslist') }}';
+                    const urlVehiculos = '{{ route('vehiculoslist') }}';
+
+                    axios.get(urlAsignacion)
+                        .then(res => {
+                            console.log(res.data);
+                            this.asignaciones = res.data;
+                        })
+                    axios.get(urlCondutores)
+                        .then(res => {
+                            console.log(res.data);
+                            this.conductores = res.data;
+                        })
+                    axios.get(urlVehiculos)
+                        .then(res => {
+                            console.log(res.data);
+                            this.vehiculos = res.data;
+                        })
+                },
+
+                postAsignacion(condu, vehic) {
+                    const urlAsignacion = '{{ route('asignar') }}';
+                    data = {
+                        condutor: condu,
+                        vehiculo: vehic
+                    }
+
+                    axios.post(url, data)
+                        .then(res => {
+                            console.log(res);
+                        });
+                }
+
+            },
+            mounted() {
+                this.getInitData();
+            }
+        })
+    </script>
 
 </body>
 

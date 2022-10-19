@@ -13,3 +13,4 @@ use App\Http\Controllers\AsignacionController;
 |
 */
 Route::get('/', [AsignacionController::class, 'homeAsigancion'])->name('home');
+Route::get('/vue', [AsignacionController::class, 'vueAsignacion'])->name('vue');

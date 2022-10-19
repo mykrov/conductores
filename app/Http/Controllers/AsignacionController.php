@@ -27,7 +27,7 @@ class AsignacionController extends Controller
 
     public function Asignar(Request $r)
     {
-        Log::info('Nueva Asignacion', ['peticion'=>$r]);
+        Log::info('Nueva Asignacion', ['peticion' => $r]);
         $idConductor = $r->conductor;
         $idVehiculo = $r->vehiculo;
 
@@ -37,35 +37,38 @@ class AsignacionController extends Controller
 
         try {
             $asignacion->save();
-            return response()->json(['status'=> 'ok'],201);
+            return response()->json(['status' => 'ok'], 201);
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
-            return response()->json(['status'=> 'error'],500);
+            return response()->json(['status' => 'error'], 500);
         }
-       
     }
 
     public function homeAsigancion()
     {
         $listaAsignaciones  = DB::table('asignacion')
-        ->join('conductor','asignacion.conductor','conductor.id')
-        ->join('vehiculo','asignacion.vehiculo','vehiculo.idvehiculo')
-        ->select(
-            'asignacion.idasignacion',
-            'conductor.nombre',
-            'conductor.apellido',
-            'vehiculo.idvehiculo',
-            'vehiculo.modelo',
-            'vehiculo.marca',
-            'vehiculo.placa',
-            'conductor.cedula'
+            ->join('conductor', 'asignacion.conductor', 'conductor.id')
+            ->join('vehiculo', 'asignacion.vehiculo', 'vehiculo.idvehiculo')
+            ->select(
+                'asignacion.idasignacion',
+                'conductor.nombre',
+                'conductor.apellido',
+                'vehiculo.idvehiculo',
+                'vehiculo.modelo',
+                'vehiculo.marca',
+                'vehiculo.placa',
+                'conductor.cedula'
             )
-        ->get();
-       
+            ->get();
+
         $listaConductores = Conductor::all();
         $listaVehiculos = Vehiculo::all();
 
-        return view('table',['conductores'=>$listaConductores,'vehiculos'=>$listaVehiculos, 'asignaciones'=>$listaAsignaciones ]);
+        return view('table', ['conductores' => $listaConductores, 'vehiculos' => $listaVehiculos, 'asignaciones' => $listaAsignaciones]);
+    }
 
+    public function vueAsignacion()
+    {
+        return view('vue');
     }
 }
